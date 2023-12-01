@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cbaml="http://cbaml.softcon.de" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_5hkHMFajEeuMhrHBi5UcKQ" type="Cbaml" name="page.cbaml_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_6rzFsFajEeuMhrHBi5UcKQ" type="2001" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6rzFslajEeuMhrHBi5UcKQ" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_7iCKIFajEeuMhrHBi5UcKQ" type="3001" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7iCKIlajEeuMhrHBi5UcKQ" type="7002">
+          <children xmi:type="notation:Shape" xmi:id="_sbFTIH8AEe6EzMeo0Aa-dw" type="3099" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+            <element xmi:type="cbaml:ExternalPageFrame" href="platform:/resource//Projects/page.cbaml#_sT0NgH8AEe6EzMeo0Aa-dw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sbFTIX8AEe6EzMeo0Aa-dw" x="12" y="5" width="276" height="732"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_J1L4wIXoEe61TPmFtdJd9w" type="3077" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_J1L4woXoEe61TPmFtdJd9w" type="5054"/>
+            <element xmi:type="cbaml:VariableValueDisplay" href="platform:/resource//Projects/page.cbaml#_Jz9wwIXoEe61TPmFtdJd9w"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J1L4wYXoEe61TPmFtdJd9w" x="300" y="740" width="61" height="23"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_LcM54IXoEe61TPmFtdJd9w" type="3077" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_LcM54YXoEe61TPmFtdJd9w" type="5054"/>
+            <element xmi:type="cbaml:VariableValueDisplay" href="platform:/resource//Projects/page.cbaml#_LaTccIXoEe61TPmFtdJd9w"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LcM54oXoEe61TPmFtdJd9w" x="400" y="740" width="61" height="23"/>
+          </children>
+        </children>
+        <element xmi:type="cbaml:Panel" href="platform:/resource//Projects/page.cbaml#_7iBjEFajEeuMhrHBi5UcKQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7iCKIVajEeuMhrHBi5UcKQ" width="1024" height="768"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_40W88H8AEe6EzMeo0Aa-dw" type="3084" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+        <element xmi:type="cbaml:PageArea" href="platform:/resource//Projects/page.cbaml#_40KIoH8AEe6EzMeo0Aa-dw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_40W88X8AEe6EzMeo0Aa-dw" x="300" y="5" width="696" height="732"/>
+      </children>
+    </children>
+    <element xmi:type="cbaml:Frame" href="platform:/resource//Projects/page.cbaml#_6rxQgFajEeuMhrHBi5UcKQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6rzFsVajEeuMhrHBi5UcKQ" width="1024" height="768"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_5hkHMVajEeuMhrHBi5UcKQ"/>
+  <element xmi:type="cbaml:CBAMLRoot" href="platform:/resource//Projects/page.cbaml#_5hjgIFajEeuMhrHBi5UcKQ"/>
+</notation:Diagram>

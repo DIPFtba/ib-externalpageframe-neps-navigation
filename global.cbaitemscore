@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbaitemscore:Item xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cbaitemscore="http://cbaitemscore.softcon.de" xmi:id="_SlR18H8EEe6EzMeo0Aa-dw" version="VERSION_01_01">
+  <itemScoreList xmi:id="_pmnUIIiHEe6XXZNccK4WyQ" name="task0" minimumHits="1" conditionStatus="true" startPage="page" initializationFile="" startXPage="" isScoringTask="false" taskToScore="">
+    <hitList xmi:id="_pmnUIYiHEe6XXZNccK4WyQ" name="Task2_OR" weight="1" fileReference="hit_12918190614910544302.condition_dsl" conditionStatus="true" classProperty="Task2_MISSING"/>
+    <hitList xmi:id="_pmnUIoiHEe6XXZNccK4WyQ" name="Task2_SKIP" weight="1" fileReference="hit_7200808079887367065.condition_dsl" conditionStatus="true" classProperty="Task2_MISSING"/>
+    <hitList xmi:id="_pmnUI4iHEe6XXZNccK4WyQ" name="Task2_NR" weight="1" fileReference="hit_12280629652016562777.condition_dsl" conditionStatus="true" classProperty="Task2_MISSING"/>
+    <classList xmi:id="_pmnUJIiHEe6XXZNccK4WyQ" name="Task1_MISSING" comment=""/>
+    <classList xmi:id="_pmnUJYiHEe6XXZNccK4WyQ" name="Task2_MISSING" comment=""/>
+  </itemScoreList>
+  <itemScoreList xmi:id="_pmnUJoiHEe6XXZNccK4WyQ" name="task1" minimumHits="1" conditionStatus="true" startPage="nexttask" initializationFile="" startXPage="" isScoringTask="false" taskToScore=""/>
+</cbaitemscore:Item>

@@ -1,0 +1,76 @@
+{
+  "title": "NEPS Navigation Example",
+  "type": "object",
+  "basicCategoryTitle": "Basic",
+  "properties": {
+    "text_pages": {
+      "type": "array",
+      "title": "Text Pages",
+      "format": "table",
+      "description": "Pages used for text.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pageName": {
+            "title": "Page Name",
+            "type": "string",
+            "description": "Label that should be shown in the Navigation",
+            "default": ""
+          },
+          "navigateEventName": {
+            "title": "Event Name (Navigation)",
+            "type": "string",
+            "description": "Name of the FSM event that should be triggert to navigate to this page.",
+            "default": ""
+          },
+          "countVisitsVariableName": {
+            "title": "Variable Name (Visit Counter)",
+            "type": "string",
+            "description": "Name of an FSM Variable that is used to count the visits of this page.",
+            "default": "(none)"
+          }
+        }
+      }
+    },
+    "task_pages": {
+      "type": "array",
+      "title": "Task Pages",
+      "format": "table",
+      "description": "Pages used for task.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pageName": {
+            "title": "Page Name",
+            "type": "string",
+            "description": "Label that should be shown in the Navigation",
+            "default": ""
+          },
+          "navigateEventName": {
+            "title": "Event Name (Navigation)",
+            "type": "string",
+            "description": "Name of the FSM event that should be triggert to navigate to this page.",
+            "default": ""
+          },
+          "solvedEventName": {
+            "title": "Event Name (Solved)",
+            "type": "string",
+            "description": "Name of the FSM event that is triggert when the task is solved.",
+            "default": ""
+          },
+          "countVisitsVariableName": {
+            "title": "Variable Name (Visit Counter)",
+            "type": "string",
+            "description": "Name of an FSM Variable that is used to count the visits of this page.",
+            "default": "(none)"
+          }
+        }
+      }
+    },
+    "finishEventName": {
+      "title": "Event Name (Finish)",
+      "type": "string",
+      "description": "Name of the FSM event that is triggert when NEXT is clicked on the last page.",
+      "default": ""
+    }
+  }

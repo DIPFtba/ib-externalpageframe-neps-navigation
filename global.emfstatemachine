@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statemachine:Machine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:statemachine="http://statemachine.softcon.de" version="VERSION_01_01">
+  <states name="S" type="START"/>
+  <states name="R"/>
+</statemachine:Machine>

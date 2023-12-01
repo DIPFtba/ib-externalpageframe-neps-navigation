@@ -1,0 +1,126 @@
+{
+  "runtimeCompatibilityVersion" : "10.0.0",
+  "itemName" : "navigationtestexample",
+  "itemWidth" : 1024,
+  "itemHeight" : 768,
+  "tasks" : [ "task0", "task1" ],
+  "resources" : [ ],
+  "externalResources" : [ {
+    "pathInZip" : "external-resources\\index.html",
+    "size" : 2012,
+    "type" : "urlTarget"
+  } ],
+  "dependencies" : [ ],
+  "variables" : [ {
+    "name" : "VisitCounterTask1",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterTask2",
+    "type" : "integer"
+  }, {
+    "name" : "Task2Solved_p1",
+    "type" : "integer"
+  }, {
+    "name" : "Task2Solved_p2",
+    "type" : "integer"
+  }, {
+    "name" : "Option1",
+    "type" : "integer"
+  }, {
+    "name" : "Option2",
+    "type" : "integer"
+  }, {
+    "name" : "Option3",
+    "type" : "integer"
+  }, {
+    "name" : "Answer1",
+    "type" : "integer"
+  }, {
+    "name" : "Answer2",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterTask3",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterTask4",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterText1",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterText2",
+    "type" : "integer"
+  }, {
+    "name" : "Next_Task",
+    "type" : "integer"
+  }, {
+    "name" : "Solved_All",
+    "type" : "integer"
+  }, {
+    "name" : "Solved_Task1",
+    "type" : "integer"
+  }, {
+    "name" : "Solved_Task2",
+    "type" : "integer"
+  }, {
+    "name" : "Solved_Task3",
+    "type" : "integer"
+  }, {
+    "name" : "Solved_Task4",
+    "type" : "integer"
+  }, {
+    "name" : "Task5_dragged_V1",
+    "type" : "integer"
+  }, {
+    "name" : "Task5_dragged_V2",
+    "type" : "integer"
+  }, {
+    "name" : "Task5_dragged_V3",
+    "type" : "integer"
+  }, {
+    "name" : "Solved_Task5",
+    "type" : "integer"
+  }, {
+    "name" : "Option1_P5_1",
+    "type" : "integer"
+  }, {
+    "name" : "Option1_P5_2",
+    "type" : "integer"
+  }, {
+    "name" : "Option2_P5_1",
+    "type" : "integer"
+  }, {
+    "name" : "Option2_P5_2",
+    "type" : "integer"
+  }, {
+    "name" : "Option3_P5_1",
+    "type" : "integer"
+  }, {
+    "name" : "Option3_P5_2",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterTask51",
+    "type" : "integer"
+  }, {
+    "name" : "VisitCounterTask52",
+    "type" : "integer"
+  }, {
+    "name" : "Answer1_Task51",
+    "type" : "integer"
+  }, {
+    "name" : "Answer1_Task52",
+    "type" : "integer"
+  }, {
+    "name" : "Answer2_Task51",
+    "type" : "integer"
+  }, {
+    "name" : "Answer2_Task52",
+    "type" : "integer"
+  }, {
+    "name" : "Answer3_Task51",
+    "type" : "integer"
+  }, {
+    "name" : "Answer3_Task52",
+    "type" : "integer"
+  } ]
+}

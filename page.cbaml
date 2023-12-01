@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbaml:CBAMLRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbaml="http://cbaml.softcon.de" xmi:id="_5hjgIFajEeuMhrHBi5UcKQ" contributeVariable="false" version="VERSION_01_14">
+  <items xsi:type="cbaml:Frame" xmi:id="_6rxQgFajEeuMhrHBi5UcKQ" id="-8f39c68:18bb42fe2c4:-8000" width="1024" height="768" backgroundColor="-1" fontName="Segoe UI" italic="false" bold="false" underlined="false" fontSize="9" fontColor="-16777216" userDefinedId="$56930932054000" borderColor="-5197648" contributeVariable="false">
+    <items xsi:type="cbaml:Panel" xmi:id="_7iBjEFajEeuMhrHBi5UcKQ" width="1024" height="768" backgroundColor="-1" fontName="Segoe UI" italic="false" bold="false" underlined="false" fontSize="9" fontColor="-16777216" userDefinedId="$56930932107100" borderColor="-5197648" contributeVariable="false">
+      <items xsi:type="cbaml:ExternalPageFrame" xmi:id="_sT0NgH8AEe6EzMeo0Aa-dw" width="276" height="732" x="12" y="5" backgroundColor="-1" fontName="Segoe UI" italic="false" bold="false" underlined="false" fontSize="9" fontColor="-16777216" userDefinedId="NAV" borderColor="-5197648" cssClassName="" contributeVariable="false" pageAddress="index.html"/>
+      <items xsi:type="cbaml:VariableValueDisplay" xmi:id="_Jz9wwIXoEe61TPmFtdJd9w" width="61" height="23" x="300" y="740" backgroundColor="-1" fontName="Arial" italic="false" bold="false" underlined="false" fontSize="9" text="VisitCounterTask1" fontColor="-16777216" userDefinedId="$386675418183700" borderColor="-5197648" variable="VisitCounterTask1"/>
+      <items xsi:type="cbaml:VariableValueDisplay" xmi:id="_LaTccIXoEe61TPmFtdJd9w" width="61" height="23" x="400" y="740" backgroundColor="-1" fontName="Arial" italic="false" bold="false" underlined="false" fontSize="9" text="VisitCounterTask2" fontColor="-16777216" userDefinedId="$386675418197500" borderColor="-5197648" variable="VisitCounterTask2"/>
+    </items>
+    <items xsi:type="cbaml:PageArea" xmi:id="_40KIoH8AEe6EzMeo0Aa-dw" width="696" height="732" x="300" y="5" backgroundColor="-1" fontName="Segoe UI" italic="false" bold="false" underlined="false" fontSize="9" fontColor="-16777216" reference="-8f39c68:18bb42fe2c4:-7fff" userDefinedId="PA" borderColor="-5197648" contributeVariable="false"/>
+  </items>
+</cbaml:CBAMLRoot>

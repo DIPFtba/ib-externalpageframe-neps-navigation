@@ -1,0 +1,72 @@
+Events: EndTask, 					    // Immer notwendig, egal wie viele Seiten
+		Text1, Text2, Task1, Task2, Task3, Task4, Task51, Task52,    // Ein Event pro Text-/Task-Seite		
+		Task1Solved, 
+		Task2Solved_p1, Task2Solved_p2, EV_Check_Task2Solved, Task2Solved,
+		EV_Check, Task3Solved,
+		Task4Solved,
+		EV_Check_Task5Solved,Task5Solved,
+		alltaskssolved,
+		nexttask;       // Mindestens ein Event pro Task-Seite, 
+									    // ggf. mehr bei komplexen Tasks  
+
+Rules: S->R{true|set(VisitCounterText1,1)}					    // Startregel immer notwendig
+
+R internal       
+	{Text1|setEmbeddedPage(PA, text1)}	// Eine Zeile pro Seite  
+	{Text2|setEmbeddedPage(PA, text2),set(VisitCounterText2,1)}
+	{Task1|setEmbeddedPage(PA, task1),set(VisitCounterTask1,1)}
+	{Task2|setEmbeddedPage(PA, task2),set(VisitCounterTask2,1)}
+	{Task3|setEmbeddedPage(PA, task3),set(VisitCounterTask3,1)}
+	{Task4|setEmbeddedPage(PA, task4),set(VisitCounterTask4,1)}
+	{Task51|setEmbeddedPage(PA, task51),set(VisitCounterTask51,1)}
+	{Task52|setEmbeddedPage(PA, task52),set(VisitCounterTask52,1)}	
+	// Zusätzlich mindestens eine Zeile pro Task-Seite, welche an die
+	// Navigationskomponente weiterleitet, dass ein Task gelöst wurde
+	
+	//Single-Choice
+	{Task1Solved|callExternalPageFrame(NAV, "Task1SolvedNotification"),raise(alltaskssolved),set(Solved_Task1,1)}
+	
+	//Richtig-Falsch
+	{Task2Solved_p1|set(Task2Solved_p1,1),raise(EV_Check_Task2Solved)}
+	{Task2Solved_p2|set(Task2Solved_p2,1),raise(EV_Check_Task2Solved)}
+	{EV_Check_Task2Solved:([Task2Solved_p1==1]and[Task2Solved_p2==1])|raise(Task2Solved)}
+	
+	{Task2Solved|callExternalPageFrame(NAV, "Task2SolvedNotification"),raise(alltaskssolved),set(Solved_Task2,1)}
+	
+	//DragandDrop
+	{EV_Check:([Answer1>0] and [Answer2>0])|raise(Task3Solved)}
+	
+	{Task3Solved|callExternalPageFrame(NAV, "Task3SolvedNotification"),raise(alltaskssolved),set(Solved_Task3,1)}
+	
+	//Highlight
+	{Task4Solved|callExternalPageFrame(NAV, "Task4SolvedNotification"),raise(alltaskssolved),set(Solved_Task4,1)}
+	
+	//dual-page item
+	{EV_Check:
+		((([Option1_P5_1==0]or[Option1_P5_2==0])and
+		  ([Option2_P5_1==0]or[Option2_P5_2==0]))and
+		  ([Option3_P5_1==0]or[Option3_P5_2==0]))|
+		  set(Solved_Task5,1),
+		  callExternalPageFrame(NAV, "Task51SolvedNotification"),
+		  callExternalPageFrame(NAV, "Task52SolvedNotification")
+	}
+	
+	//All Tasks Solved?
+	{alltaskssolved:[Solved_Task1+Solved_Task2+Solved_Task3+Solved_Task4+Solved_Task5==5]|set(Solved_All,1)}
+	
+	//End Dialog
+	{EndTask:[Solved_All==0]|openDialog(enddialog_incomplete)} 
+	{EndTask:[Solved_All==1]|raise(nexttask)}        	   // Hier könnte bspw. auch erstmal // ein Dialog aufgehen
+	    	  
+	{nexttask|set(Next_Task,1),next_task()}								   
+									   
+/* Für das Lesen und Verändern der FSM:
+ *  - Die Event-Namen müssen dann zu den passen, die in der config.json 
+ *    der Erweiterungskomponente definiert sind. In CBA ItemBuilder 10.1
+ *    könnte das dann im ItemBuilder konfiguriert werden
+ *  - Die Namen der Seiten, welche in der Navigation angezeigt werden, werden 
+ *    dann auch nur in der config.json definiert.
+ *  - Das Layout / Aussehen der Navigation kommt dann nicht mehr aus 
+ *    (aufwändig) erstellten Bildern, sondern kann in Rücksprache  
+ *    dann in der CSS-Definition der Navigationskomponenten verändert werden
+ */

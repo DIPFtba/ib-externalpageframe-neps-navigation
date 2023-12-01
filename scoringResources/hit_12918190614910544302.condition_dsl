@@ -1,0 +1,2 @@
+((variable_in(Task2Solved_p1,0)and variable_in(Task2Solved_p2,0))
+	and variable_in (VisitCounterTask2,1))

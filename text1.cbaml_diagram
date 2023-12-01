@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cbaml="http://cbaml.softcon.de" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_5hkHMFajEeuMhrHBi5UcKQ" type="Cbaml" name="text1.cbaml_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_6rzFsFajEeuMhrHBi5UcKQ" type="2001" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6rzFslajEeuMhrHBi5UcKQ" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_7iCKIFajEeuMhrHBi5UcKQ" type="3001" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7iCKIlajEeuMhrHBi5UcKQ" type="7002">
+          <children xmi:type="notation:Shape" xmi:id="_NsN1QH8EEe6EzMeo0Aa-dw" type="3089" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_NsN1Qn8EEe6EzMeo0Aa-dw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/text1.cbaml#_NWNJAH8EEe6EzMeo0Aa-dw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NsN1QX8EEe6EzMeo0Aa-dw" x="12" y="12" width="664" height="79"/>
+          </children>
+        </children>
+        <element xmi:type="cbaml:Panel" href="platform:/resource//Projects/text1.cbaml#_7iBjEFajEeuMhrHBi5UcKQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7iCKIVajEeuMhrHBi5UcKQ" width="696" height="732"/>
+      </children>
+    </children>
+    <element xmi:type="cbaml:Frame" href="platform:/resource//Projects/text1.cbaml#_6rxQgFajEeuMhrHBi5UcKQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6rzFsVajEeuMhrHBi5UcKQ" width="696" height="732"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_5hkHMVajEeuMhrHBi5UcKQ"/>
+  <element xmi:type="cbaml:CBAMLRoot" href="platform:/resource//Projects/text1.cbaml#_5hjgIFajEeuMhrHBi5UcKQ"/>
+</notation:Diagram>

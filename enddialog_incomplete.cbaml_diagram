@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cbaml="http://cbaml.softcon.de" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_5hkHMFajEeuMhrHBi5UcKQ" type="Cbaml" name="enddialog_incomplete.cbaml_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_6rzFsFajEeuMhrHBi5UcKQ" type="2001" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6rzFslajEeuMhrHBi5UcKQ" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_7iCKIFajEeuMhrHBi5UcKQ" type="3001" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7iCKIlajEeuMhrHBi5UcKQ" type="7002">
+          <children xmi:type="notation:Shape" xmi:id="_PH9dUIiCEe6xL9polji8aw" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_PH9dUoiCEe6xL9polji8aw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_PH82QIiCEe6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PH9dUYiCEe6xL9polji8aw" x="70" y="125" width="405" height="75"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_R0riQYiCEe6xL9polji8aw" type="3003" fontColor="-16777216" fontName="Arial" fontHeight="15" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_R0riQ4iCEe6xL9polji8aw" type="5002"/>
+            <element xmi:type="cbaml:Button" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_R0riQIiCEe6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R0riQoiCEe6xL9polji8aw" x="45" y="225" width="195" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_UsrDEYiCEe6xL9polji8aw" type="3003" fontColor="-16777216" fontName="Arial" fontHeight="15" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_UsrDEoiCEe6xL9polji8aw" type="5002"/>
+            <element xmi:type="cbaml:Button" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_UsrDEIiCEe6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UsrDE4iCEe6xL9polji8aw" x="270" y="225" width="195" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_fqk-QIiGEe6XXZNccK4WyQ" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_fqk-QoiGEe6XXZNccK4WyQ" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_foO04IiGEe6XXZNccK4WyQ"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fqk-QYiGEe6XXZNccK4WyQ" x="70" y="50" width="405" height="60"/>
+          </children>
+        </children>
+        <element xmi:type="cbaml:Panel" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_7iBjEFajEeuMhrHBi5UcKQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7iCKIVajEeuMhrHBi5UcKQ" width="600" height="400"/>
+      </children>
+    </children>
+    <element xmi:type="cbaml:Frame" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_6rxQgFajEeuMhrHBi5UcKQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6rzFsVajEeuMhrHBi5UcKQ" x="200" y="100" width="600" height="400"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_5hkHMVajEeuMhrHBi5UcKQ"/>
+  <element xmi:type="cbaml:CBAMLRoot" href="platform:/resource//Projects/enddialog_incomplete.cbaml#_5hjgIFajEeuMhrHBi5UcKQ"/>
+</notation:Diagram>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="./components.js" type="module"></script>
+		<script src="./config.js"></script>
+		<link rel="stylesheet" href="./tailwind.css" media="all" />
+	</head>
+
+	<body>
+		<ib-navigation id="navigation"></ib-navigation>
+	</body>
+
+	<script>
+
+		function declareVariables(){
+				// return  [
+				// 	{
+				// 		name: "didntWork2",
+				// 		type: "Integer",
+				// 		defaultValue: 0,
+				// 		namedValues: []
+				// 	}							
+				// ];
+				if(ibConfig?.task_pages && Array.isArray(ibConfig.task_pages) && ibConfig.task_pages.length){
+					try {                
+						return ibConfig.task_pages.map(p => {
+							return {
+								name: p.countVisitsVariableName+"_",
+								type: "Integer",
+								defaultValue: 0,
+								namedValues: []
+							}
+						})
+					} catch (error) {
+						console.error(error);
+						return [
+							{
+								name: "didntWork",
+								type: "Integer",
+								defaultValue: 0,
+								namedValues: []
+							}							
+						];
+					}
+				}
+				return  [
+						{
+							name: "didntWork2",
+							type: "Integer",
+							defaultValue: 0,
+							namedValues: []
+						}							
+				];
+		}
+
+		function startListeningToVariableDeclarationRequests(declareVariableCallback) {
+			// listener for providing initial variable data signal.
+			window.addEventListener(
+			"message",
+			(event) => {    
+				const { callId } = JSON.parse(event.data);
+				if(typeof callId !== "undefined" && callId.includes("importVariables")) {
+					const variables = declareVariables();
+					const pass_data = {
+					initialVariables: variables,
+					callId
+					}
+					try {
+						window.parent.postMessage(JSON.stringify(pass_data), '*');
+					} catch (error) {
+						console.log("error on external listener - ", error);
+					}
+				}
+			},
+			false);
+		}
+
+
+		startListeningToVariableDeclarationRequests(declareVariables);		
+
+		try {
+			const taskPages = JSON.stringify(ibConfig.task_pages);
+			const textPages = JSON.stringify(ibConfig.text_pages);
+			const title = ibConfig.title ? ibConfig.title : null;
+			
+			document.getElementById('navigation').setAttribute('taskPages', taskPages);
+			document.getElementById('navigation').setAttribute('textPages', textPages);
+			if(title)
+				document.getElementById('navigation').setAttribute('menuTitle', title);
+
+		} catch (error) {
+			console.error(error);
+		}
+
+/*
+		window.addEventListener("load", (e) => {
+			try {
+				fetch("./config.json")
+				.then(response => response.json())
+				.then(pages => {
+					const taskPages = JSON.stringify(pages.task_pages);
+					const textPages = JSON.stringify(pages.text_pages);
+					const title = pages.title ? pages.title : null;
+
+					startListeningToVariableDeclarationRequests(() => {
+						if(pages.task_pages && Array.isArray(pages.task_pages) && pages.task_pages.length){
+							try {                
+								return pages.task_pages.map(p => {
+									return {
+										name: p.countVisitsVariableName,
+										type: "Integer",
+										defaultValue: 0,
+										namedValues: []
+									}
+								})
+							} catch (error) {
+								console.error(error);
+								return [];
+							}
+						}
+					})
+					
+					document.getElementById('navigation').setAttribute('taskPages', taskPages);
+					document.getElementById('navigation').setAttribute('textPages', textPages);
+					if(title)
+						document.getElementById('navigation').setAttribute('menuTitle', title);
+				})
+				// const taskPages = JSON.stringify(defaultPages.task_pages);
+				// const textPages = JSON.stringify(defaultPages.text_pages);
+				// document.getElementById('navigation').setAttribute('taskPages', taskPages);
+				// document.getElementById('navigation').setAttribute('textPages', textPages);
+			} catch (error) {
+				console.error(error);
+			}
+		});
+*/
+
+
+	</script>
+
+</html>

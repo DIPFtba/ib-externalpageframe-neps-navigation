@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cbaml="http://cbaml.softcon.de" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_5hkHMFajEeuMhrHBi5UcKQ" type="Cbaml" name="task52.cbaml_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_6rzFsFajEeuMhrHBi5UcKQ" type="2001" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6rzFslajEeuMhrHBi5UcKQ" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_7iCKIFajEeuMhrHBi5UcKQ" type="3001" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+        <children xmi:type="notation:DecorationNode" xmi:id="_7iCKIlajEeuMhrHBi5UcKQ" type="7002">
+          <children xmi:type="notation:Shape" xmi:id="_NsN1QH8EEe6EzMeo0Aa-dw" type="3089" fontColor="-16777216" fontName="Segoe UI" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_NsN1Qn8EEe6EzMeo0Aa-dw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/task52.cbaml#_NWNJAH8EEe6EzMeo0Aa-dw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NsN1QX8EEe6EzMeo0Aa-dw" x="12" y="12" width="664" height="79"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_-bQMQIh9Ee6xL9polji8aw" type="3066" fontColor="-16777216" fontName="Arial" fontHeight="20" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_-bQzUIh9Ee6xL9polji8aw" type="5043"/>
+            <element xmi:type="cbaml:MapBasedVariableDisplay" href="platform:/resource//Projects/task52.cbaml#_-bGbQIh9Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-bQMQYh9Ee6xL9polji8aw" x="45" y="195" width="75" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_AhpRAIh-Ee6xL9polji8aw" type="3066" fontColor="-16777216" fontName="Arial" fontHeight="20" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_AhpRAYh-Ee6xL9polji8aw" type="5043"/>
+            <element xmi:type="cbaml:MapBasedVariableDisplay" href="platform:/resource//Projects/task52.cbaml#_Ahop8Ih-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AhpRAoh-Ee6xL9polji8aw" x="150" y="195" width="75" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_BR7ecYh-Ee6xL9polji8aw" type="3066" fontColor="-16777216" fontName="Arial" fontHeight="20" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_BR7ecoh-Ee6xL9polji8aw" type="5043"/>
+            <element xmi:type="cbaml:MapBasedVariableDisplay" href="platform:/resource//Projects/task52.cbaml#_BR7ecIh-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BR7ec4h-Ee6xL9polji8aw" x="255" y="195" width="75" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_CxrZ8Yh-Ee6xL9polji8aw" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_CxrZ84h-Ee6xL9polji8aw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/task52.cbaml#_CxrZ8Ih-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CxrZ8oh-Ee6xL9polji8aw" x="45" y="135" width="285" height="45"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JC7VkYh-Ee6xL9polji8aw" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_JC7Vk4h-Ee6xL9polji8aw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/task52.cbaml#_JC7VkIh-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JC7Vkoh-Ee6xL9polji8aw" x="45" y="300" width="285" height="45"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_MGemIYh-Ee6xL9polji8aw" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_MGemI4h-Ee6xL9polji8aw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/task52.cbaml#_MGemIIh-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MGemIoh-Ee6xL9polji8aw" x="60" y="390" width="105" height="45"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_N2GJtYh-Ee6xL9polji8aw" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_N2GJtoh-Ee6xL9polji8aw" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/task52.cbaml#_N2GJoIh-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N2GJt4h-Ee6xL9polji8aw" x="60" y="450" width="105" height="45"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_RnBdkYh-Ee6xL9polji8aw" type="3066" fontColor="-16777216" fontName="Arial" fontHeight="20" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_RnBdk4h-Ee6xL9polji8aw" type="5043"/>
+            <element xmi:type="cbaml:MapBasedVariableDisplay" href="platform:/resource//Projects/task52.cbaml#_RnBdkIh-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RnBdkoh-Ee6xL9polji8aw" x="180" y="375" width="75" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_SK3xgIh-Ee6xL9polji8aw" type="3066" fontColor="-16777216" fontName="Arial" fontHeight="20" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_SK3xgYh-Ee6xL9polji8aw" type="5043"/>
+            <element xmi:type="cbaml:MapBasedVariableDisplay" href="platform:/resource//Projects/task52.cbaml#_SK3KcIh-Ee6xL9polji8aw"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SK3xgoh-Ee6xL9polji8aw" x="180" y="450" width="75" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_lPh4ho7EEe6yfYbiYIjiCg" type="3066" fontColor="-16777216" fontName="Arial" fontHeight="20" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_lPh4h47EEe6yfYbiYIjiCg" type="5043"/>
+            <element xmi:type="cbaml:MapBasedVariableDisplay" href="platform:/resource//Projects/task52.cbaml#_lPh4hY7EEe6yfYbiYIjiCg"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lPh4iI7EEe6yfYbiYIjiCg" x="180" y="525" width="75" height="60"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_lPh4iY7EEe6yfYbiYIjiCg" type="3089" fontColor="-16777216" fontName="Arial" fillColor="-1" lineColor="-5197648">
+            <children xmi:type="notation:DecorationNode" xmi:id="_lPh4io7EEe6yfYbiYIjiCg" type="5061"/>
+            <element xmi:type="cbaml:HTMLTextField" href="platform:/resource//Projects/task52.cbaml#_lPh4cI7EEe6yfYbiYIjiCg"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lPh4i47EEe6yfYbiYIjiCg" x="60" y="525" width="105" height="45"/>
+          </children>
+        </children>
+        <element xmi:type="cbaml:Panel" href="platform:/resource//Projects/task52.cbaml#_7iBjEFajEeuMhrHBi5UcKQ"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7iCKIVajEeuMhrHBi5UcKQ" width="696" height="732"/>
+      </children>
+    </children>
+    <element xmi:type="cbaml:Frame" href="platform:/resource//Projects/task52.cbaml#_6rxQgFajEeuMhrHBi5UcKQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6rzFsVajEeuMhrHBi5UcKQ" width="696" height="732"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_5hkHMVajEeuMhrHBi5UcKQ"/>
+  <element xmi:type="cbaml:CBAMLRoot" href="platform:/resource//Projects/task52.cbaml#_5hjgIFajEeuMhrHBi5UcKQ"/>
+</notation:Diagram>

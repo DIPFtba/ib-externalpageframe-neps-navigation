@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valuemap:ValueMapper xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:valuemap="http://valuemap.softcon.de" version="VERSION_01_01">
+  <valueMaps xsi:type="valuemap:DiscreteValueMap" name="VM_DD">
+    <entries guard="2" text="2"/>
+    <entries guard="3" text="3"/>
+    <entries guard="4" text="4"/>
+    <entries guard="*"/>
+  </valueMaps>
+</valuemap:ValueMapper>
