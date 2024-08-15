@@ -3,6 +3,12 @@
   "type": "object",
   "basicCategoryTitle": "Basic",
   "properties": {
+    "titleFontSize": {
+      "title": "Title Font Size",
+      "type": "string",
+      "description": "Font size of the title.",
+      "default": "20px"
+    },
     "text_pages": {
       "type": "array",
       "title": "Text Pages",

@@ -19,9 +19,9 @@
 			.then(response => response.json())
 			.then(jsonSchemaData => {
 				resolve({
-							jsonSchema: JSON.stringify(jsonSchemaData),
-							configFileName: 'config.json' 
-						});
+					jsonSchema: JSON.stringify(jsonSchemaData),
+					configFileName: 'config.json' 
+				});
 			})
 			.catch(error => reject(error));
 		 });
@@ -170,10 +170,12 @@
 			try {
 				const taskPages = JSON.stringify(jsonSchemaData.task_pages);
 				const textPages = JSON.stringify(jsonSchemaData.text_pages);
+				const titleFontSize = jsonSchemaData.titleFontSize ? jsonSchemaData.titleFontSize : "20px";
 				const title = jsonSchemaData.title ? jsonSchemaData.title : null;
 				
 				document.getElementById('navigation').setAttribute('taskPages', taskPages);
 				document.getElementById('navigation').setAttribute('textPages', textPages);
+				document.getElementById('navigation').setAttribute('titleFontSize', titleFontSize);
 				if(title)
 					document.getElementById('navigation').setAttribute('menuTitle', title);
 		

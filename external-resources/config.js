@@ -1,6 +1,5 @@
-{
+const ibConfig = {
     "title": "Menü Titel",
-    "titleFontSize": "30px",
     "text_pages": [
         {
             "pageName": "Text 1",

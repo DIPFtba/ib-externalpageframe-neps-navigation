@@ -7,6 +7,7 @@ export class IBNavigation extends LitElement {
         textPages: { type: Array },
         taskPages: { type: Array },
         menuTitle: { type: String },
+        titleFontSize: { type: String },
         currentPage: { attribute: false },
     }
 
@@ -202,11 +203,11 @@ export class IBNavigation extends LitElement {
     }
 
     render() {
-        const allPages = this.pages.map((p, i) => {
+        const textPages = this.textPages.map((p, i) => {
             return html`
                 <li 
                     @click="${() => this.goto(i)}"
-                    class="cursor-pointer text-black ${!p?.visited ? 'font-bold' : 'font-semibold'} ${!this.reachedTasks && p.type == 'taskPage' ? 'hidden' : ''} ${i == this.currentPage ? 'border-2 border-accent1 rounded-md' : 'p-[2px]'}"
+                    class="cursor-pointer  ${!p?.visited ? 'font-bold' : 'font-semibold'} ${i == this.currentPage ? 'border-2 border-accent1 rounded-md' : 'p-[2px]'}"
                 >
                     <div class="flex flex-row gap-2 items-center justify-center w-full ${p?.solved ? 'text-gray-600' : ''}">
                         <div>${p.pageName}</div>
@@ -218,17 +219,32 @@ export class IBNavigation extends LitElement {
                     </div>
                 </li>
             `
+        });        
+        const taskPages = this.taskPages.map((p, i) => {
+            return html`
+                <li 
+                    @click="${() => this.goto(i)}"
+                    class="cursor-pointer ${!p?.visited ? 'font-bold' : 'font-semibold'}  ${i+this.textPages.length == this.currentPage ? 'border-2 border-accent1 rounded-md' : 'p-[2px]'}"
+                >
+                    <div class="flex flex-row gap-2 items-center justify-center w-full ${p?.solved ? 'text-gray-600' : ''}">
+                        <div>${p.pageName}</div>
+                    </div>
+                </li>
+            `
         });
         return html`
             <div class="flex flex-col h-screen bg-accent2">
                 ${this.menuTitle ? html`
-                    <div class="p-4 w-full text-white font-bold text-center text-2xl bg-accent1 border-b-2 border-black">
+                    <div style="font-size: ${this.titleFontSize}" class="p-4 w-full text-white font-bold text-center bg-accent1 border-b-2 border-black">
                         ${this.menuTitle}
                     </div>
                 `: ""}                 
                 <div class="p-4 bg-gray-300 w-full text-center border-b-2 border-black">
-                    <ul class="list-none text-xl">
-                        ${allPages}
+                    <ul  class="list-none text-xl p-2 bg-slate-400">
+                        ${textPages}
+                    </ul>
+                    <ul class="list-none text-xl p-2 text-black ${!this.reachedTasks ? 'hidden' : ''}">
+                        ${taskPages}
                     </ul>
                 </div>    
                 <div class="mt-4 flex-grow flex flex-col justify-end">
