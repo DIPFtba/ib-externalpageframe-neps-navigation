@@ -223,7 +223,7 @@ export class IBNavigation extends LitElement {
         const taskPages = this.taskPages.map((p, i) => {
             return html`
                 <li 
-                    @click="${() => this.goto(i)}"
+                    @click="${() => this.goto(i+this.textPages.length)}"
                     class="cursor-pointer ${!p?.visited ? 'font-bold' : 'font-semibold'}  ${i+this.textPages.length == this.currentPage ? 'border-2 border-accent1 rounded-md' : 'p-[2px]'}"
                 >
                     <div class="flex flex-row gap-2 items-center justify-center w-full ${p?.solved ? 'text-gray-600' : ''}">
