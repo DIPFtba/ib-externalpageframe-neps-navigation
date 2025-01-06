@@ -95,7 +95,7 @@ export class IBNavigation extends LitElement {
                     }
                 });                   
             }
-            postStatemachineEvent(currentPageObject?.navigateEventName, this.traceCount++);
+            postStatemachineEvent(currentPageObject?.navigateEventName, 1);
             if(currentPageObject?.type == "taskPage")
                 postSetVariable(currentPageObject?.countVisitsVariableName, visited);
             this.requestUpdate("currentPage", oldPage);
@@ -189,7 +189,7 @@ export class IBNavigation extends LitElement {
         if (this.hasNext)
             this.currentPage++;
         else
-            postStatemachineEvent('EndTask', this.traceCount++);
+            postStatemachineEvent('EndTask', 1);
     }
 
     prev() {
