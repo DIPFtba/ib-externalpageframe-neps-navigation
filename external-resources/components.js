@@ -8,6 +8,7 @@ export class IBNavigation extends LitElement {
         taskPages: { type: Array },
         menuTitle: { type: String },
         titleFontSize: { type: String },
+        linkFontSize: { type: String },
         currentPage: { attribute: false },
     }
 
@@ -58,7 +59,10 @@ export class IBNavigation extends LitElement {
                 visited: 0
             }
         });
-        this._textPages[0].visited = 1;
+        if(this._textPages.length > 0)
+        	this._textPages[0].visited = 1;
+    	else
+    		this.reachedTasks = true;
         this.requestUpdate('taskPages', oldValue);
     }
 
@@ -67,6 +71,8 @@ export class IBNavigation extends LitElement {
         if (Array.isArray(this.textPages) && Array.isArray(this.taskPages)){
             return this.textPages.concat(this.taskPages);
         }
+        if(Array.isArray(this.taskPages))
+        	return this.taskPags;
         return [];
     }
 
@@ -128,7 +134,7 @@ export class IBNavigation extends LitElement {
             data.forEach(e => {
                 this.taskPages.forEach((t,i) => {
                     if(t.solvedEventName == e){
-                        t.solved = true;
+                        t.solved = !t.solved;
                         upd = true;
                     }
                 })
@@ -163,6 +169,7 @@ export class IBNavigation extends LitElement {
         super.connectedCallback();
         // startListeningToRuntimePostMessageEvents(this.getVariableResultCallback, this.acceptOperatorMessage)
         startListeningToRuntimePostMessageEvents(this.getVariableResultCallback, this.acceptOperatorMessage);
+        this.currentPage = 0;
         // startListeningToVariableDeclarationRequests(this.declareVariables);
     }
 
@@ -207,10 +214,10 @@ export class IBNavigation extends LitElement {
             return html`
                 <li 
                     @click="${() => this.goto(i)}"
-                    class="cursor-pointer  ${!p?.visited ? 'font-bold' : 'font-semibold'} ${i == this.currentPage ? 'border-2 border-accent1 rounded-md' : 'p-[2px]'}"
+                    class="cursor-pointer p-1 ${!p?.visited ? 'font-bold' : 'font-semibold'}"
                 >
-                    <div class="flex flex-row gap-2 items-center justify-center w-full ${p?.solved ? 'text-gray-600' : ''}">
-                        <div>${p.pageName}</div>
+                    <div class="flex flex-row gap-2 items-center justify-left w-full ${p?.solved ? 'text-gray-600' : ''} ${i == this.currentPage ? 'border-4 border-[#009ede] rounded-md' : 'p-[4px]'}">
+                        <div style="font-size: ${this.linkFontSize}">${p.pageName}</div>
                         <!--
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 ${!p?.solved? 'invisible' : ''}">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -224,10 +231,10 @@ export class IBNavigation extends LitElement {
             return html`
                 <li 
                     @click="${() => this.goto(i+this.textPages.length)}"
-                    class="cursor-pointer ${!p?.visited ? 'font-bold' : 'font-semibold'}  ${i+this.textPages.length == this.currentPage ? 'border-2 border-accent1 rounded-md' : 'p-[2px]'}"
+                    class="cursor-pointer p-1 ${!p?.visited ? 'font-bold' : 'font-semibold'}"
                 >
-                    <div class="flex flex-row gap-2 items-center justify-center w-full ${p?.solved ? 'text-gray-600' : ''}">
-                        <div>${p.pageName}</div>
+                    <div class="flex flex-row gap-2 items-center justify-left w-full ${p?.solved ? 'text-blue-700' : ''} ${i+this.textPages.length == this.currentPage ? 'border-4 border-[#009ede] rounded-md' : 'p-[4px]'}">
+                        <div style="font-size: ${this.linkFontSize}">${p.pageName}</div>
                     </div>
                 </li>
             `
@@ -239,16 +246,16 @@ export class IBNavigation extends LitElement {
                         ${this.menuTitle}
                     </div>
                 `: ""}                 
-                <div class="p-4 bg-gray-300 w-full text-center border-b-2 border-black">
-                    <ul  class="list-none text-xl p-2 bg-slate-400">
+                <div class="w-full text-center">
+                    <ul id="text-pages" style="font-size: ${this.linkFontSize}" class="list-none bg-gray-300 border-b-2 border-black">
                         ${textPages}
                     </ul>
-                    <ul class="list-none text-xl p-2 text-black ${!this.reachedTasks ? 'hidden' : ''}">
+                    <ul id="task-pages" style="font-size: ${this.linkFontSize}" class="list-none text-black ${!this.reachedTasks ? 'hidden' : ''}">
                         ${taskPages}
                     </ul>
                 </div>    
                 <div class="mt-4 flex-grow flex flex-col justify-end">
-                    <div class="flex items-center justify-center gap-2 border-t-2 py-4 border-black">
+                    <div class="flex items-center justify-left gap-2 border-t-2 py-4 border-black">
                         <button class="disabled:opacity-40 disabled:cursor-not-allowed" type="button" ?disabled="${!this.hasPrev}" @click="${this.prev}"><img class="h-14" src="./assets/prev_page_1.png" /></button>
                         <button class="disabled:opacity-40 disabled:cursor-not-allowed" type="button" ?hidden="${!this.hasNext}" @click="${this.next}"><img class="h-14" src="./assets/next_page_1.png" /></button>
                         <button class="disabled:opacity-40 disabled:cursor-not-allowed" type="button" ?hidden="${this.hasNext}"  @click="${this.next}"><img class="h-14" src="./assets/next_unit_1.png" /></button>
