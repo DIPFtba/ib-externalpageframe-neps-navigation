@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<script src="./components.js" type="module"></script>
 		<link rel="stylesheet" href="./tailwind.css" media="all" />
+		<link rel="stylesheet" href="./style.css" media="all" />
 	</head>
 
 	<body>
-		<ib-navigation id="navigation"></ib-navigation>
 	</body>
 
 	<script>
@@ -19,9 +19,9 @@
 			.then(response => response.json())
 			.then(jsonSchemaData => {
 				resolve({
-					jsonSchema: JSON.stringify(jsonSchemaData),
-					configFileName: 'config.json' 
-				});
+							jsonSchema: JSON.stringify(jsonSchemaData),
+							configFileName: 'config.json' 
+						});
 			})
 			.catch(error => reject(error));
 		 });
@@ -31,24 +31,39 @@
 	function startListeningToJsonEditorConfigRequests(jsonEditorConfigCallback) {
  		window.addEventListener(
 		"message",
-		(event) => {    
-			const { callId } = JSON.parse(event.data);
-		    if(callId !== undefined && callId.includes("importJsonData")) {
-		    	jsonEditorConfig().then(data => {
-			        const pass_data = {
-			            jsonSchema: data.jsonSchema,
-			            configFileName: data.configFileName,
-			            callId
-			        } 
-			        try {
-				    	window.parent.postMessage(JSON.stringify(pass_data), '*');
-				    } catch (error) {
-				    	console.log("error on external listener - ", error);
-				    }			           		
-		        }).catch(error => {
-			    	console.error('Error fetching json editor configuration:', error);
-				});
+		(event) => {
+			if (typeof event.data !== "string") {
+		        return; // Ignore non-string messages
 		    }
+		    // Parse the message data
+		    let parsedData;
+		    try {
+		        parsedData = JSON.parse(event.data);
+		    } catch (error) {
+		        console.error("Error parsing message data:", error);
+		        return; // Ignore messages that cannot be parsed
+		    }
+		    
+		    // Check if the callId is present and matches the expected format
+		    if (!parsedData.callId || !parsedData.callId.includes("importJsonData")) {
+		        return; // Ignore messages without the expected callId
+		    }
+
+			const { callId } = parsedData;
+			jsonEditorConfig().then(data => {
+				const pass_data = {
+					jsonSchema: data.jsonSchema,
+					configFileName: data.configFileName,
+					callId
+				} 
+				try {
+					window.parent.postMessage(JSON.stringify(pass_data), '*');
+				} catch (error) {
+					console.log("error on external listener - ", error);
+				}			           		
+			}).catch(error => {
+				console.error('Error fetching json editor configuration:', error);
+			});
 		}, false);
  	}
 	
@@ -124,7 +139,7 @@
 									if(v.countVisitsVariableName && v.countVisitsVariableName != "(none)")
 										return {
 											name: v.countVisitsVariableName,
-											type: "String",
+											type: "Integer",
 											defaultValue: 0,
 											namedValues: []
 										}								
@@ -135,7 +150,7 @@
 									if(v.countVisitsVariableName && v.countVisitsVariableName != "(none)")
 										return {
 											name: v.countVisitsVariableName,
-											type: "String",
+											type: "Integer",
 											defaultValue: 0,
 											namedValues: []
 										}								
@@ -171,13 +186,25 @@
 				const taskPages = JSON.stringify(jsonSchemaData.task_pages);
 				const textPages = JSON.stringify(jsonSchemaData.text_pages);
 				const titleFontSize = jsonSchemaData.titleFontSize ? jsonSchemaData.titleFontSize : "20px";
+				const linkFontSize = jsonSchemaData.linkFontSize ? jsonSchemaData.linkFontSize : "20px";
 				const title = jsonSchemaData.title ? jsonSchemaData.title : null;
 				
-				document.getElementById('navigation').setAttribute('taskPages', taskPages);
-				document.getElementById('navigation').setAttribute('textPages', textPages);
-				document.getElementById('navigation').setAttribute('titleFontSize', titleFontSize);
+				// document.getElementById('navigation').setAttribute('taskPages', taskPages);
+				// document.getElementById('navigation').setAttribute('textPages', textPages);
+				// document.getElementById('navigation').setAttribute('titleFontSize', titleFontSize);
+				// document.getElementById('navigation').setAttribute('linkFontSize', linkFontSize);
+				// if(title)
+				// 	document.getElementById('navigation').setAttribute('menuTitle', title);
+				let navigation = document.createElement('ib-navigation');
+				navigation.setAttribute('id', 'navigation');
+				navigation.setAttribute('taskPages', taskPages);
+				navigation.setAttribute('textPages', textPages);
+				navigation.setAttribute('titleFontSize', titleFontSize);
+				navigation.setAttribute('linkFontSize', linkFontSize);
 				if(title)
-					document.getElementById('navigation').setAttribute('menuTitle', title);
+					navigation.setAttribute('menuTitle', title);
+				document.body.appendChild(navigation);
+				
 		
 			} catch (error) {
 				console.error(error);
